@@ -1,0 +1,103 @@
+.circle{
+     height:250px;
+     width:250px;
+     border-radius:50%;
+     background-color:rgb(248, 69, 69);
+     border: 5px dashed rgb(187, 128, 235);
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     animation:rotating 6s linear infinite;
+     
+}
+@keyframes rotating {
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+.container{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    overflow:hidden;
+    gap:20px;
+    background:linear-gradient(to right,rgb(136, 0, 255),rgb(224, 43, 73));
+}
+.shape1{
+    height:100px;
+    width: 100px;
+    background-color: rgb(46, 93, 196);
+    border:2px solid rgb(165, 165, 165);
+    position: fixed;
+    animation:rotating_anti 6s linear infinite;
+   
+   
+    
+}
+@keyframes rotating_anti {
+    100%{
+        transform: rotate(-360deg);
+    }
+    
+}
+.triangle{
+    height:100px;
+    width: 100px;
+    background-color: rgb(98, 195, 41);
+    border:2px solid rgb(97, 96, 96);
+    position: fixed;
+    animation:rotating_anti 6s linear infinite;
+    clip-path:polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.diamond{
+    height:100px;
+    width: 100px;
+    background-color: rgb(228, 104, 199);
+    border:2px solid rgb(79, 76, 76);
+    position: fixed;
+    animation:rotating_anti 6s linear infinite;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.circle1{
+    height:100px;
+    width: 100px;
+    background-color: rgb(65, 176, 201);
+    border:2px solid rgb(165, 165, 165);
+    position: fixed;
+    animation:rotating_anti 6s linear infinite;
+    border-radius: 50%;
+}
+.rectangle{
+    height:80px;
+    width: 200px;
+    background-color: rgb(189, 52, 220);
+    border:2px solid rgb(165, 165, 165);
+    position: fixed;
+    animation:rotating_anti 6s linear infinite;
+}
+#change-color{
+    color:white;
+    padding:10px;
+    background-color: black;
+    border-radius: 6px;
+
+}
+#change-color:hover{
+    color:black;
+    background-color: rgb(226, 156, 43);
+}
+#change-shape{
+    color:white;
+    background-color: rgb(194, 233, 22);
+    border-color:rgb(111, 235, 45);
+    transition: 0.1s ease-in-out;
+    padding:10px;
+    border-radius: 6px;
+}
+#change-shape:hover{
+    transform: rotate(35deg);
+}
